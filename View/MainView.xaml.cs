@@ -47,5 +47,29 @@ namespace WPF_LoginForm.View
             {
                 this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
             }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
+
+        private void btnMaximized_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (this.WindowState == WindowState.Normal)
+                this.WindowState = WindowState.Maximized;
+            else this.WindowState = WindowState.Normal;
+            
+        }
+
+        private void btnMinimized_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Maximized;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
 }
